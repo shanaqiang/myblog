@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title itemprop="name">Sakura~ - Just another WordPress site</title>
+    <link rel="shortcut icon" href="https://view.moezx.cc/images/2018/05/12/29985a98-ubuntu-logo32.th.png"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel='dns-prefetch' href='//cdn.jsdelivr.net'/>
+    <link rel='dns-prefetch' href='//s.w.org'/>
+    <link rel='stylesheet' id='wp-block-library-css'
+          th:href='@{/easy/css/block_library.css}' type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='APlayer.min-css'
+          th:href='@{/easy/css/aplayer.css}'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='saukra_css-css'
+          th:href='@{easy/css/style.css}'
+          media='all'/>
+    <link rel='https://api.w.org/' href='https://sakura.2heng.xin/wp-json/'/>
+    <script>
+        /*Initial Variables*/
+        var mashiro_option = new Object();
+        var mashiro_global = new Object();
+        mashiro_option.NProgressON = true;
+        mashiro_option.email_domain = "moezx.cc";
+        mashiro_option.email_name = "me";
+        mashiro_option.cookie_version_control = "---2019/8/23";
+        mashiro_option.qzone_autocomplete = false;
+        mashiro_option.site_name = "樱花庄的喵";
+        mashiro_option.author_name = "Mashiro";
+        mashiro_option.template_url = "https://sakura.2heng.xin/wp-content/themes/Sakura";
+        mashiro_option.site_url = "https://sakura.2heng.xin";
+        mashiro_option.qq_api_url = "https://api.2heng.xin/qqinfo/";
+        mashiro_option.qq_avatar_api_url = "https://api.2heng.xin/qqinfo/";
+        mashiro_option.live_search = true;
+
+        mashiro_option.skin_bg0 = "none https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/sakura.png https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/plaid2dbf8.jpg https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/star02.png https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/kyotoanimation.png https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/dot_orange.gif https://api.mashiro.top/bing/ https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.2/other-sites/api-index/images/me.png";
+        mashiro_option.skin_bg1 = "";
+        mashiro_option.skin_bg2 = "";
+        mashiro_option.skin_bg3 = "";
+        mashiro_option.skin_bg4 = "";
+        mashiro_option.skin_bg5 = "";
+        mashiro_option.skin_bg6 = "";
+        mashiro_option.skin_bg7 = "";
+
+        mashiro_option.land_at_home = true;
+
+        mashiro_option.baguetteBoxON = false;
+
+        mashiro_option.clipboardCopyright = true;
+
+        mashiro_option.entry_content_theme_src = "https://sakura.2heng.xin/wp-content/themes/Sakura/cdn/theme/github.css?3.2.7---2019/8/23";
+        mashiro_option.entry_content_theme = "github";
+
+        mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.2.7/cdn/css/lib.min.css";
+        mashiro_option.float_player_on = true;
+
+        mashiro_option.cover_api = "https://api.2heng.xin/cover/";
+
+        /*End of Initial Variables*/
+    </script>
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
+        }
+    </script>
+    <link rel="stylesheet" href="../static/easy/css/block_library.css">
+</head>
+<body class="home blog hfeed chinese-font">
+<div class="scrollbar" id="bar"></div>
+<section id="main-container">
+    <div class="headertop filter-dot">
+        <figure id="centerbg" class="centerbg">
+            <div class="focusinfo">
+                <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Hi, Mashiro!</h1>
+                <div class="header-info">
+                    <p>一沙一世界，一花一天堂。君掌盛无边，刹那成永恒。</p>
+                    <div class="top-social_v2">
+                        <li id="bg-pre"><img class="flipx"
+                                             src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg"/>
+                        </li>
+                        <li class="wechat"><a href="#"><img
+                                src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png"/></a>
+                            <div class="wechatInner">
+                                <img src="https://sakura.2heng.xin/wp-content/uploads/2018/11/630509135.png"
+                                     alt="WeChat">
+                            </div>
+                        </li>
+                        <li><a onclick="mail_me()" class="social-wangyiyun" title="E-mail"><img
+                                src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/email.svg"/></a>
+                        </li>
+                        <li id="bg-next"><img
+                                src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg"/></li>
+                    </div>
+                </div>
+            </div>
+        </figure>
+        <div id="video-container" style="">
+            <video id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto"></video>
+            <div id="video-btn" class="loadvideo videolive"></div>
+            <div id="video-add"></div>
+            <div class="video-stu"></div>
+        </div>
+    </div>
+    <div id="page" class="site wrapper">
+        <header class="site-header no-select" role="banner">
+            <div class="site-top">
+                <div class="site-branding">
+                    <div class="site-title">
+                        <a href="https://sakura.2heng.xin"><img
+                                src="https://sakura.2heng.xin/wp-content/uploads/2018/06/mashiro-logo.png"></a>
+                    </div>
+
+                </div>
+                <div class="header-user-avatar">
+                    <a href="https://sakura.2heng.xin/login/">
+                        <img class="faa-shake animated-hover"
+                             src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/none.png" width="30"
+                             height="30">
+                    </a>
+                    <div class="header-user-menu">
+                        <div class="herder-user-name no-logged">Whether to <a href="https://sakura.2heng.xin/login/"
+                                                                              target="_blank"
+                                                                              style="color:#333;font-weight:bold;text-decoration:none">log
+                            in</a> now?
+                        </div>
+                    </div>
+                </div>
+                <div class="searchbox"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div>
+                <div class="lower">
+                    <nav>
+                        <ul id="menu-menu-1" class="menu">
+                            <li class="current-menu-item"><a href="https://sakura.2heng.xin/"
+                                                             aria-current="page">Home</a></li>
+                            <li><a href="https://sakura.2heng.xin/archiv/">Timeline</a></li>
+                            <li><a href="#">Categories</a>
+                                <ul class="sub-menu">
+                                    <li><a href="https://sakura.2heng.xin/father/">Father</a></li>
+                                    <li><a href="https://sakura.2heng.xin/father/child/">Child</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://sakura.2heng.xin/links/">Links</a></li>
+                            <li><a href="https://sakura.2heng.xin/about/">About</a></li>
+                            <li><a href="https://sakura.2heng.xin/sample-page/">More</a>
+                                <ul class="sub-menu">
+                                    <li><a href="https://sakura.2heng.xin/sample-page/">Sample</a></li>
+                                    <li><a href="https://sakura.2heng.xin/privacy-policy/">Privacy</a></li>
+                                    <li><a href="https://sakura.2heng.xin/wp-login.php">Login</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://sakura.2heng.xin/login/">Login</a></li>
+                            <li><a href="https://sakura.2heng.xin/music/">Music</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="blank"></div>
+        <div id="content" class="site-content">
+            <div class="notice" style="margin-top:60px">
+                <i class="iconfont icon-notification"></i>
+                <div class="notice-content">Sakura 主题上线啦~>ω&lt;</div>
+            </div>
+            <div class="top-feature-row">
+                <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-anchor"
+                                                                                    aria-hidden="true"></i> 聚焦</h1>
+                <div class="top-feature-v2">
+                    <div class="the-feature square from_left_and_right">
+                        <a href="#" target="_blank">
+                            <div class="img"><img src="https://view.moezx.cc/images/2018/05/29/sakura-6.md.jpg"></div>
+                            <div class="info">
+                                <h3>feature1</h3>
+                                <p>Description goes here 1</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-feature-v2">
+                    <div class="the-feature square from_left_and_right" style="margin: 0 4.5px">
+                        <a href="#" target="_blank">
+                            <div class="img"><img src="https://view.moezx.cc/images/2018/05/29/sakura-5.md.jpg"></div>
+                            <div class="info">
+                                <h3>feature2</h3>
+                                <p>Description goes here 2</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-feature-v2">
+                    <div class="the-feature square from_left_and_right">
+                        <a href="#" target="_blank">
+                            <div class="img"><img src="https://view.moezx.cc/images/2018/05/29/sakura-4.md.jpg"></div>
+                            <div class="info">
+                                <h3>feature3</h3>
+                                <p>Description goes here 3</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-envira"
+                                                                                         aria-hidden="true"></i>
+                        Discovery</h1>
+                    <article class="post post-list-thumb " itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <div class="post-thumb">
+                            <a href="https://sakura.2heng.xin/2018/05/25/markdown/"><img class="lazyload"
+                                                                                         src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg"
+                                                                                         data-src="https://sakura.2heng.xin/wp-content/uploads/2018/05/r63888719_by__LM7_-1024x534.jpg"></a>
+                        </div>
+                        <div class="post-content-wrap">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="iconfont icon-time"></i>Posted on 2018-05-25 &nbsp;<i
+                                        class="iconfont hotpost icon-hot"></i>
+                                </div>
+                                <a href="https://sakura.2heng.xin/2018/05/25/markdown/" class="post-title"><h3>
+                                    Markdown</h3></a>
+                                <div class="post-meta">
+                                    <span><i class="iconfont icon-attention"></i>8 478 Hits</span>
+                                    <span class="comments-number"><i class="iconfont icon-mark"></i><a
+                                            href="https://sakura.2heng.xin/2018/05/25/markdown/#comments">26 Comments</a></span>
+                                    <span><i class="iconfont icon-file"></i><a
+                                            href="https://sakura.2heng.xin/father/child/">Child</a>
+                                    </span>
+                                </div>
+                                <div class="float-content">
+                                    <p>Bigger data and more intelligent algorithms are being processed and analyzed
+                                    <div class="post-bottom">
+                                        <a href="https://sakura.2heng.xin/2018/05/25/markdown/" class="button-normal"><i
+                                                class="iconfont icon-caidan"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post post-list-thumb post-list-thumb-left" itemscope=""
+                             itemtype="http://schema.org/BlogPosting">
+                        <div class="post-thumb">
+                            <a href="https://sakura.2heng.xin/2019/10/28/108/"><img class="lazyload"
+                                                                                    src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg"
+                                                                                    data-src="https://api.mashiro.top/feature/?510"></a>
+                        </div>
+                        <div class="post-content-wrap">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="iconfont icon-time"></i>Posted on 9 days ago
+                                </div>
+                                <a href="https://sakura.2heng.xin/2019/10/28/108/" class="post-title"><h3></h3></a>
+                                <div class="post-meta">
+                                    <span><i class="iconfont icon-attention"></i>53 Hits</span>
+                                    <span class="comments-number"><i class="iconfont icon-mark"></i><a
+                                            href="https://sakura.2heng.xin/2019/10/28/108/#comments">1 Comment</a></span>
+                                    <span><i class="iconfont icon-file"></i><a
+                                            href="https://sakura.2heng.xin/uncategorized/">Uncategorized</a>
+                                    </span>
+                                </div>
+                                <div class="float-content">
+                                    <p>[anything]</p>
+                                    <div class="post-bottom">
+                                        <a href="https://sakura.2heng.xin/2019/10/28/108/" class="button-normal"><i
+                                                class="iconfont icon-caidan"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post post-list-thumb " itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <div class="post-thumb">
+                            <a href="https://sakura.2heng.xin/2019/08/07/hls-video/"><img class="lazyload"
+                                                                                          src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg"
+                                                                                          data-src="https://sakura.2heng.xin/wp-content/uploads/2019/08/1565156557097.gif"></a>
+                        </div>
+                        <div class="post-content-wrap">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="iconfont icon-time"></i>Posted on 2019-08-07
+                                </div>
+                                <a href="https://sakura.2heng.xin/2019/08/07/hls-video/" class="post-title"><h3>HLS
+                                    Video</h3></a>
+                                <div class="post-meta">
+                                    <span><i class="iconfont icon-attention"></i>442 Hits</span>
+                                    <span class="comments-number"><i class="iconfont icon-mark"></i><a
+                                            href="https://sakura.2heng.xin/2019/08/07/hls-video/#respond">NOTHING</a></span>
+                                    <span><i class="iconfont icon-file"></i><a
+                                            href="https://sakura.2heng.xin/uncategorized/">Uncategorized</a>
+                                    </span>
+                                </div>
+                                <div class="float-content">
+                                    <p>🐕🐕🐕🐕🐕🐕🐕</p>
+                                    <div class="post-bottom">
+                                        <a href="https://sakura.2heng.xin/2019/08/07/hls-video/"
+                                           class="button-normal"><i class="iconfont icon-caidan"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post post-list-thumb post-list-thumb-left" itemscope=""
+                             itemtype="http://schema.org/BlogPosting">
+                        <div class="post-thumb">
+                            <a href="https://sakura.2heng.xin/2018/05/25/hello-world/"><img class="lazyload"
+                                                                                            src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg"
+                                                                                            data-src="https://api.mashiro.top/feature/?809"></a>
+                        </div>
+                        <div class="post-content-wrap">
+                            <div class="post-content">
+                                <div class="post-date">
+                                    <i class="iconfont icon-time"></i>Posted on 2018-05-25
+                                </div>
+                                <a href="https://sakura.2heng.xin/2018/05/25/hello-world/" class="post-title"><h3>Hello
+                                    world!</h3></a>
+                                <div class="post-meta">
+                                    <span><i class="iconfont icon-attention"></i>2 598 Hits</span>
+                                    <span class="comments-number"><i class="iconfont icon-mark"></i><a
+                                            href="https://sakura.2heng.xin/2018/05/25/hello-world/#comments">20 Comments</a></span>
+                                    <span><i class="iconfont icon-file"></i><a
+                                            href="https://sakura.2heng.xin/uncategorized/">Uncategorized</a>
+                                    </span>
+                                </div>
+                                <div class="float-content">
+                                    <p>Welcome to WordPress. This is your first post. Edit or delete it, then start
+                                    <div class="post-bottom">
+                                        <a href="https://sakura.2heng.xin/2018/05/25/hello-world/"
+                                           class="button-normal"><i class="iconfont icon-caidan"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+                <div id="pagination"></div>
+                <div id="add_post"><span id="add_post_time" style="visibility: hidden;" title="1"></span></div>
+            </div>
+        </div>
+    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info" theme-info="Sakura v3.2.7">
+            <div class="footertext">
+                <div class="img-preload">
+                    <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/wordpress-rotating-ball-o.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/disqus-preloader.svg">
+                </div>
+                <p style="color: #666666;">Copyright © by 樱花庄的白猫 All Rights Reserved.</p>
+            </div>
+            <div class="footer-device">
+                <p style="font-family: 'Ubuntu', sans-serif;">
+<span style="color: #b9b9b9;">
+Theme <a href="https://2heng.xin/theme-sakura/" target="_blank"
+         style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+        class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+        href="https://2heng.xin/" target="_blank"
+        style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>
+</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="openNav no-select">
+        <div class="iconflat no-select">
+            <div class="icon"></div>
+        </div>
+        <div class="site-branding">
+            <div class="site-title"><a href="https://sakura.2heng.xin"><img
+                    src="https://sakura.2heng.xin/wp-content/uploads/2018/06/mashiro-logo.png"></a></div>
+        </div>
+    </div>
+</section>
+
+<div id="mo-nav">
+    <div class="m-avatar">
+        <img src="https://sakura.2heng.xin/wp-content/themes/Sakura/images/avatar.jpg">
+    </div>
+    <div class="m-search">
+        <form class="m-search-form" method="get" action="https://sakura.2heng.xin" role="search">
+            <input class="m-search-input" type="search" name="s" placeholder="Search..." required>
+        </form>
+    </div>
+    <ul id="menu-menu-2" class="menu">
+        <li class="current-menu-item"><a href="https://sakura.2heng.xin/" aria-current="page">Home</a></li>
+        <li><a href="https://sakura.2heng.xin/archiv/">Timeline</a></li>
+        <li><a href="#">Categories</a>
+            <ul class="sub-menu">
+                <li><a href="https://sakura.2heng.xin/father/">Father</a></li>
+                <li><a href="https://sakura.2heng.xin/father/child/">Child</a></li>
+            </ul>
+        </li>
+        <li><a href="https://sakura.2heng.xin/links/">Links</a></li>
+        <li><a href="https://sakura.2heng.xin/about/">About</a></li>
+        <li><a href="https://sakura.2heng.xin/sample-page/">More</a>
+            <ul class="sub-menu">
+                <li><a href="https://sakura.2heng.xin/sample-page/">Sample</a></li>
+                <li><a href="https://sakura.2heng.xin/privacy-policy/">Privacy</a></li>
+                <li><a href="https://sakura.2heng.xin/wp-login.php">Login</a></li>
+            </ul>
+        </li>
+        <li><a href="https://sakura.2heng.xin/login/">Login</a></li>
+        <li><a href="https://sakura.2heng.xin/music/">Music</a></li>
+    </ul>
+</div>
+<a class="cd-top faa-float animated "></a>
+<button onclick="topFunction()" id="moblieGoTop" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<form class="js-search search-form search-form--modal" method="get" action="https://sakura.2heng.xin" role="search">
+    <div class="search-form__inner">
+        <div class="micro">
+            <i class="iconfont icon-search"></i>
+            <input id="search-input" class="text-input" type="search" name="s" placeholder="Want to find something？"
+                   required>
+        </div>
+        <div class="ins-section-wrapper">
+            <a id="Ty" href="#"></a>
+            <div class="ins-section-container" id="PostlistBox"></div>
+        </div>
+    </div>
+    <div class="search_close"></div>
+</form>
+
+<script type='text/javascript'
+        src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.6/assets/js/APlayer.min.js?ver=2.9.6'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var HermitX = {"ajaxurl": "https:\/\/sakura.2heng.xin\/wp-admin\/admin-ajax.php", "version": "2.9.6"};
+    /* ]]> */
+</script>
+<script type='text/javascript'
+        src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.6/assets/js/hermit-load.min.js?ver=2.9.6'></script>
+<script type='text/javascript'
+        src='https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.2.7/cdn/js/lib.min.js?ver=3.2.7'></script>
+
+<div class="changeSkin-gear no-select" style="bottom: -999px;">
+    <div class="keys">
+<span id="open-skinMenu">
+<i class="iconfont icon-gear inline-block rotating"></i>&nbsp; 切换主题 | SCHEME TOOL
+</span>
+    </div>
+</div>
+<div class="skin-menu no-select">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg">
+                <i class="fa fa-television" aria-hidden="true"></i>
+            </li>
+            <li id="sakura-bg">
+                <i class="iconfont icon-sakura"></i>
+            </li>
+            <li id="gribs-bg">
+                <i class="fa fa-slack" aria-hidden="true"></i>
+            </li>
+            <li id="KAdots-bg">
+                <i class="iconfont icon-dots"></i>
+            </li>
+            <li id="totem-bg">
+                <i class="fa fa-superpowers" aria-hidden="true"></i>
+            </li>
+            <li id="pixiv-bg">
+                <i class="iconfont icon-pixiv"></i>
+            </li>
+            <li id="bing-bg">
+                <i class="iconfont icon-bing"></i>
+            </li>
+            <li id="dark-bg">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="font-family-controls row-container">
+        <button type="button" class="control-btn-serif selected" data-mode="serif"
+                onclick="mashiro_global.font_control.change_font()">Serif
+        </button>
+        <button type="button" class="control-btn-sans-serif" data-mode="sans-serif"
+                onclick="mashiro_global.font_control.change_font()">Sans Serif
+        </button>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+<div id="aplayer-float" style="z-index: 100;" class="aplayer" data-id="2288037900" data-server="netease"
+     data-type="playlist" data-fixed="true" data-theme="orange">
+</div>
+<style>.skin-menu {
+    left: auto;
+    right: 10px;
+}
+
+.changeSkin-gear {
+    left: auto;
+    right: 5px;
+}</style>
+</body>
+</html>
